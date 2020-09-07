@@ -39,8 +39,14 @@ jobs:
         IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
       run: |
         ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME"
-        ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME2"
-        ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAME3"
-        
-        
+    - name: Restart IBM Cloud
+      env:
+        IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
+      run: |
+        ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAM2"
+    - name: Restart IBM Cloud
+      env:
+        IBM_APP_NAME: ${{ secrets.IBM_APP_NAME }}
+      run: |
+        ./IBM_Cloud_CLI/ibmcloud cf restart "$IBM_APP_NAM3"     
         
